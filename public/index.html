@@ -2,31 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="Anush Portfolio"
-      content=" Portfolio Web site created using create-react-app"
-    />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta name="theme-color" content="#ea580c" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Full Stack Developer & UI/UX Designer - Anush Adhikari. Creating modern web experiences with React, Next.js, Django REST Framework, and polished design." />
+    <meta name="keywords" content="Full Stack Developer, UI/UX Designer, React, Next.js, Django REST Framework, PostgreSQL, Web Development, Kathmandu" />
+    <meta name="author" content="Anush Adhikari" />
+    <meta name="copyright" content="© 2024 Anush Adhikari. All rights reserved." />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anushadhikari.com.np/" />
+    <meta property="og:title" content="Anush Adhikari - Full Stack Developer & UI/UX Designer" />
+    <meta property="og:description" content="Full Stack Developer & UI/UX Designer - Anush Adhikari. Creating modern web experiences with React, Next.js, Django REST Framework, and polished design." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anush Adhikari - Full Stack Developer & UI/UX Designer" />
+    <meta name="twitter:description" content="Full Stack Developer & UI/UX Designer - Anush Adhikari. Creating modern digital experiences." />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://anushadhikari.com.np/" />
+    
+    <!-- Manifest for PWA -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Anush Adhikari</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
+    
+    <!-- Web App Meta Tags -->
+    <meta name="application-name" content="Anush Adhikari Portfolio" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Anush Adhikari" />
+    
+    <title>Anush Adhikari - Full Stack Developer & UI/UX Designer</title>
   </head>
   <body>
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

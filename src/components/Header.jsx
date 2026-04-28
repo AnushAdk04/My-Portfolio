@@ -1,95 +1,200 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link, NavLink } from 'react-router-dom';
+import { FaBars, FaTimes, FaDownload } from 'react-icons/fa';
+import logo from '../assets/Anush Adhikari Logo.png';
 
 const Header = () => {
-    const [brandName, setBrandName] = useState("Anush Adhikari");
-    const [menuLinks, setMenuLinks] = useState([
-        {
-            title: 'Home',
-            id: 'home' // Use the ID of the section you want to scroll to
-        },
-        {
-            title: 'About',
-            id: 'about'
-        },
-        {
-            title: 'Services',
-            id: 'services'
-        },
-        {
-            title: 'Portfolio',
-            id: 'portfolio'
-        },
-        {
-            title: 'Contact',
-            id: 'contact'
-        }
-    ]);
+  const menuLinks = [
+    { title: 'Home', to: '/' },
+    { title: 'About', to: '/about' },
+    { title: 'Services', to: '/services' },
+    { title: 'Projects', to: '/projects' },
+    { title: 'Contact', to: '/contact' },
+  ];
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    return (
-        <>
-            <div className='nav flex justify-between h-20 items-center px-12 bg-gray-100 sticky top-0 z-50'>
+  const menuVariants = {
+    hidden: { opacity: 0, height: 0 },
+    visible: {
+      opacity: 1,
+      height: 'auto',
+      transition: { duration: 0.3 },
+    },
+    exit: {
+      opacity: 0,
+      height: 0,
+      transition: { duration: 0.3 },
+    },
+  };
 
-                <div>
-                    <h1 className="text-3xl font-bold">{brandName}</h1>
-                </div>
+  const menuItemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.3 },
+    },
+  };
 
-                <div className="hidden lg:flex space-x-6 text-lg font-semibold">
+  return (
+    <>
+      <motion.header
+        className="sticky top-0 z-50 bg-white shadow-md"
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="max-w-7xl mx-auto px-4 h-20 py-3 flex justify-between items-center">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center"
+              aria-label="Anush Adhikari home"
+            >
+              <img
+                src={logo}
+                alt="Anush Adhikari logo"
+                className="h-16 w-16 object-cover"
+              />
+            </motion.div>
+          </Link>
 
-                    {menuLinks.map(link => (
-                        <Link key={link.id} to={link.id} smooth duration={500} className="hover:text-orange-600 cursor-pointer">{link.title}</Link>
-                    ))}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex gap-8 items-center">
+            {menuLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `relative font-semibold transition-colors ${
+                    isActive ? 'text-orange-600' : 'text-slate-700 hover:text-orange-600'
+                  }`
+                }
+              >
+                {({ isActive }) => (
+                  <>
+                    {link.title}
+                    {isActive && (
+                      <motion.div
+                        className="absolute bottom-0 left-0 right-0 h-1 bg-orange-600 rounded-full"
+                        layoutId="underline"
+                        transition={{ duration: 0.3 }}
+                      />
+                    )}
+                  </>
+                )}
+              </NavLink>
+            ))}
+          </nav>
 
-                </div>
+          {/* Desktop CTA Buttons */}
+          <div className="hidden lg:flex gap-4">
+            <motion.a
+              href="CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 font-semibold rounded-lg hover:bg-slate-200 hover:text-slate-700 transition-colors"
+            >
+              <FaDownload size={16} />
+              CV
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/anushadhikari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 hover:text-white transition-colors shadow-lg"
+            >
+              Hire Me
+            </motion.a>
+          </div>
 
-                <div className="hidden lg:flex space-x-4 font-semibold">
-
-                    <a href='CV.pdf' target='_blank' alt="My CV" rel='noopener noreferrer' className="px-3 py-1.5 bg-orange-600 text-white text-lg rounded-full hover:bg-orange-700 shadow">Download CV</a>
-
-                    <a href="https://www.linkedin.com/in/anush-adhikari-5590862aa/" target='_blank' alt="My Linkedin Profile" rel='noopener noreferrer' className="px-3 py-1.5 bg-orange-600 text-white text-lg rounded-full hover:bg-orange-700 shadow">Hire Me</a>
-
-                </div>
-
-                <div className="lg:hidden">
-
-                    <button onClick={toggleMenu} className="text-2xl focus:outline-none">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-
-                        </svg>
-                    </button>
-                </div>
-
-            </div>
-
-            {isMenuOpen && (
-
-                <div className="lg:hidden bg-gray-100">
-
-                    {menuLinks.map(link => (
-                        <Link key={link.id} to={link.id} smooth duration={500} className="block py-2 px-4 text-lg border-b border-gray-200">{link.title}</Link>
-                    ))}
-
-                    <div className="flex flex-col items-center py-4 space-y-4">
-
-                        <a href='CV.pdf' target='_blank' alt="My CV" rel='noopener noreferrer' className="px-3 py-1.5 bg-orange-600 text-white text-xl rounded hover:bg-orange-700 shadow">Download CV</a>
-
-                        <a href="https://www.linkedin.com/in/anush-adhikari-5590862aa/" target='_blank' alt="My Linkedin Profile" rel='noopener noreferrer' className="px-3 py-1.5 bg-orange-600 text-white text-xl rounded hover:bg-orange-700 shadow">Hire Me</a>
-
-                    </div>
-                    
-                </div>
+          {/* Mobile Menu Button */}
+          <motion.button
+            onClick={toggleMenu}
+            className="lg:hidden p-2"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <FaTimes size={24} className="text-slate-700" />
+            ) : (
+              <FaBars size={24} className="text-slate-700" />
             )}
-        </>
-    );
+          </motion.button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.nav
+              variants={menuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="lg:hidden bg-slate-50 border-t border-slate-200 overflow-hidden"
+            >
+              <div className="px-4 py-4 space-y-3 max-w-7xl mx-auto">
+                {menuLinks.map((link) => (
+                  <motion.div key={link.to} variants={menuItemVariants}>
+                    <NavLink
+                      to={link.to}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={({ isActive }) =>
+                        `block px-4 py-2 font-semibold rounded-lg transition-colors ${
+                          isActive
+                            ? 'bg-orange-600 text-white'
+                            : 'text-slate-700 hover:bg-slate-100'
+                        }`
+                      }
+                    >
+                      {link.title}
+                    </NavLink>
+                  </motion.div>
+                ))}
+
+                <div className="pt-4 border-t border-slate-200 space-y-3">
+                  <motion.a
+                    href="CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                    variants={menuItemVariants}
+                    className="flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 font-semibold rounded-lg hover:bg-slate-200 hover:text-slate-700 transition-colors"
+                  >
+                    <FaDownload size={16} />
+                    Download CV
+                  </motion.a>
+                  <motion.a
+                    href="https://www.linkedin.com/in/anushadhikari/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                    variants={menuItemVariants}
+                    className="flex items-center justify-center px-4 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 hover:text-white transition-colors"
+                  >
+                    Hire Me
+                  </motion.a>
+                </div>
+              </div>
+            </motion.nav>
+          )}
+        </AnimatePresence>
+      </motion.header>
+    </>
+  );
 };
 
 export default Header;
