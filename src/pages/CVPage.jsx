@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload } from 'react-icons/fa';
+import cvPdf from '../assets/cv/CV.pdf';
 
 const CVPage = () => {
   return (
@@ -23,7 +24,7 @@ const CVPage = () => {
           </div>
 
           <a
-            href="/CV.pdf"
+            href={cvPdf}
             download
             className="inline-flex items-center justify-center gap-2 rounded-lg bg-orange-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-orange-700"
           >
@@ -40,7 +41,7 @@ const CVPage = () => {
         >
           <iframe
             title="Anush Adhikari CV"
-            src="/CV.pdf"
+            src={cvPdf}
             className="h-[78vh] w-full"
           />
         </motion.div>
