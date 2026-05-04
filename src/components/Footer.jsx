@@ -55,7 +55,7 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="Anush Adhikari logo"
-                className="h-14 w-14 rounded-full object-cover border border-orange-100 shadow-sm"
+                className="h-16 w-auto max-w-[8.5rem] object-contain"
               />
             </Link>
             <p className="text-sm text-slate-600 mt-1 mb-0">

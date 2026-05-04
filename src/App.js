@@ -4,6 +4,7 @@ import { Toaster } from 'react-hot-toast';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import AboutPage from './pages/AboutPage';
+import CVPage from './pages/CVPage';
 import ContactPage from './pages/ContactPage';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -24,6 +25,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
+            <Route path="/cv" element={<CVPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

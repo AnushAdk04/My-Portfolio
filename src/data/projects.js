@@ -1,11 +1,20 @@
-import projectRedImage from '../assets/Project RED Image.jpg';
-import buyerPortalImage from '../assets/Buyers portal.PNG';
-import chitwanTourImage from '../assets/Chitwan Tour.PNG';
+import buyerPortalDashboard from '../assets/project-screenshots/buyer-portal/dashboard.PNG';
+import buyerPortalLightMode from '../assets/project-screenshots/buyer-portal/light mode.PNG';
+import buyerPortalLogin from '../assets/project-screenshots/buyer-portal/login.PNG';
+import buyerPortalProfile from '../assets/project-screenshots/buyer-portal/profile.PNG';
+import buyerPortalSellerProfile from '../assets/project-screenshots/buyer-portal/seller profile.PNG';
+import buyerPortalUploadProperty from '../assets/project-screenshots/buyer-portal/upload property.PNG';
+import chitwanTourHomepage from '../assets/project-screenshots/chitwan-tour/homepage.PNG';
+import chitwanTourGallery from '../assets/project-screenshots/chitwan-tour/gallery.PNG';
+import chitwanTourServices from '../assets/project-screenshots/chitwan-tour/services.PNG';
+import chitwanTourPlans from '../assets/project-screenshots/chitwan-tour/plans.PNG';
+import chitwanTourWhyUs from '../assets/project-screenshots/chitwan-tour/why us.PNG';
 import projectRedDashboard from '../assets/project-screenshots/project-red/Dashboard.jpg';
 import projectRedLogin from '../assets/project-screenshots/project-red/Login.jpg';
 import projectRedPasswordChange from '../assets/project-screenshots/project-red/Password Change.jpg';
 import projectRedChatRoom from '../assets/project-screenshots/project-red/Chat Room.jpg';
 import projectRedRequestHistory from '../assets/project-screenshots/project-red/Request history.jpg';
+import snakeGameScreenshot from '../assets/project-screenshots/snake-game-using-js/game.PNG';
 
 // Project data for portfolio and project detail pages
 export const projectsData = [
@@ -18,7 +27,7 @@ export const projectsData = [
     description: 'A blood donation and request platform built to connect donors and recipients quickly.',
     longDescription:
       'Project RED is a full stack blood donation platform built with React.js, Django REST Framework, and PostgreSQL. It focuses on donor awareness, request handling, and a structured interface for better usability.',
-    coverImage: projectRedImage,
+    coverImage: projectRedDashboard,
     role: 'Full Stack Developer',
     duration: 'Ongoing',
     impact: 'Built a focused social-impact workflow for blood donation and requests',
@@ -57,7 +66,7 @@ export const projectsData = [
     description: 'A modern property discovery and listing portal with clean dashboard and property detail experience.',
     longDescription:
       'Buyer Portal is a property-focused web application with polished card layouts, listing details, and streamlined user actions. It is designed around clarity and speed with dark UI patterns and practical workflow actions.',
-    coverImage: buyerPortalImage,
+    coverImage: buyerPortalDashboard,
     role: 'Full Stack Developer',
     duration: 'Ongoing',
     impact: 'Delivered a production-ready UI and listing flow for property exploration',
@@ -66,12 +75,32 @@ export const projectsData = [
     github: 'https://github.com/AnushAdk04/Buyer-Portal',
     screenshots: [
       {
-        src: buyerPortalImage,
+        src: buyerPortalDashboard,
         alt: 'Buyer Portal property detail screenshot',
       },
       {
-        src: 'https://opengraph.githubassets.com/1/AnushAdk04/Buyer-Portal',
-        alt: 'Buyer Portal repository preview',
+        src: buyerPortalDashboard,
+        alt: 'Buyer Portal dashboard screenshot',
+      },
+      {
+        src: buyerPortalLogin,
+        alt: 'Buyer Portal login screen screenshot',
+      },
+      {
+        src: buyerPortalUploadProperty,
+        alt: 'Buyer Portal upload property screenshot',
+      },
+      {
+        src: buyerPortalProfile,
+        alt: 'Buyer Portal profile screenshot',
+      },
+      {
+        src: buyerPortalSellerProfile,
+        alt: 'Buyer Portal seller profile screenshot',
+      },
+      {
+        src: buyerPortalLightMode,
+        alt: 'Buyer Portal light mode screenshot',
       },
     ],
   },
@@ -84,17 +113,17 @@ export const projectsData = [
     description: 'Classic snake game built with JavaScript, featuring keyboard controls and score progression.',
     longDescription:
       'This project demonstrates practical JavaScript fundamentals by implementing real-time movement, collision detection, scoring logic, and responsive keyboard controls in a clean browser game.',
-    coverImage: 'https://opengraph.githubassets.com/1/AnushAdk04/Snake-Game-using-JS',
+    coverImage: snakeGameScreenshot,
     role: 'Frontend Developer',
     duration: 'Completed',
     impact: 'Showcases game-loop and logic skills with vanilla JavaScript',
     tools: ['JavaScript', 'HTML5', 'CSS3'],
-    link: null,
+    link: 'https://anushadk04.github.io/Snake-Game-using-JS/',
     github: 'https://github.com/AnushAdk04/Snake-Game-using-JS',
     screenshots: [
       {
-        src: 'https://opengraph.githubassets.com/2/AnushAdk04/Snake-Game-using-JS',
-        alt: 'Snake Game repository preview',
+        src: snakeGameScreenshot,
+        alt: 'Snake Game play screen screenshot',
       },
     ],
   },
@@ -107,7 +136,7 @@ export const projectsData = [
     description: 'A travel-focused website presenting tour details and booking-focused content for Chitwan.',
     longDescription:
       'Chitwan Tour is a live Next.js website focused on destination storytelling, travel package visibility, and conversion-friendly content structure. It is designed for clarity across desktop and mobile screens.',
-    coverImage: chitwanTourImage,
+    coverImage: chitwanTourHomepage,
     role: 'Web Developer',
     duration: 'Completed',
     impact: 'Delivered a live tourism website with clear user journey and content presentation',
@@ -116,8 +145,24 @@ export const projectsData = [
     github: null,
     screenshots: [
       {
-        src: chitwanTourImage,
+        src: chitwanTourHomepage,
         alt: 'Chitwan Tour homepage screenshot',
+      },
+      {
+        src: chitwanTourGallery,
+        alt: 'Chitwan Tour gallery screenshot',
+      },
+      {
+        src: chitwanTourServices,
+        alt: 'Chitwan Tour services screenshot',
+      },
+      {
+        src: chitwanTourPlans,
+        alt: 'Chitwan Tour plans screenshot',
+      },
+      {
+        src: chitwanTourWhyUs,
+        alt: 'Chitwan Tour why us screenshot',
       },
     ],
   },

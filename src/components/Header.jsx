@@ -5,6 +5,8 @@ import { FaBars, FaTimes, FaDownload } from 'react-icons/fa';
 import logo from '../assets/Anush Adhikari Logo.png';
 
 const Header = () => {
+  const MotionLink = motion(Link);
+
   const menuLinks = [
     { title: 'Home', to: '/' },
     { title: 'About', to: '/about' },
@@ -53,18 +55,14 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 h-20 py-3 flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <motion.div
+            <motion.img
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center"
+              src={logo}
+              alt="Anush Adhikari logo"
+              className="h-16 w-auto max-w-[7.5rem] object-contain"
               aria-label="Anush Adhikari home"
-            >
-              <img
-                src={logo}
-                alt="Anush Adhikari logo"
-                className="h-16 w-16 object-cover"
-              />
-            </motion.div>
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -97,17 +95,15 @@ const Header = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex gap-4">
-            <motion.a
-              href="CV.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <MotionLink
+              to="/cv"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 font-semibold rounded-lg hover:bg-slate-200 hover:text-slate-700 transition-colors"
             >
               <FaDownload size={16} />
               CV
-            </motion.a>
+            </MotionLink>
             <motion.a
               href="https://www.linkedin.com/in/anushadhikari/"
               target="_blank"
@@ -166,17 +162,15 @@ const Header = () => {
                 ))}
 
                 <div className="pt-4 border-t border-slate-200 space-y-3">
-                  <motion.a
-                    href="CV.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <MotionLink
+                    to="/cv"
                     onClick={() => setIsMenuOpen(false)}
                     variants={menuItemVariants}
                     className="flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 font-semibold rounded-lg hover:bg-slate-200 hover:text-slate-700 transition-colors"
                   >
                     <FaDownload size={16} />
                     Download CV
-                  </motion.a>
+                  </MotionLink>
                   <motion.a
                     href="https://www.linkedin.com/in/anushadhikari/"
                     target="_blank"

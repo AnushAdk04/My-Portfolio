@@ -119,11 +119,11 @@ const Banner = () => {
 
         {/* Content Section */}
         <motion.div className="order-1 lg:order-2 text-center lg:text-left" variants={itemVariants}>
-          <motion.div variants={itemVariants} className="inline-flex items-center justify-center bg-white/80 backdrop-blur-sm border border-orange-100 rounded-full px-3 py-2 shadow-sm mb-5">
+          <motion.div variants={itemVariants} className="inline-flex items-center justify-center mb-5">
             <img
               src={logo}
               alt="Anush Adhikari logo"
-              className="h-11 w-11 rounded-full object-cover border border-orange-100"
+              className="h-14 w-auto max-w-[8rem] object-contain"
             />
           </motion.div>
 
