@@ -15,6 +15,10 @@ import projectRedPasswordChange from '../assets/project-screenshots/project-red/
 import projectRedChatRoom from '../assets/project-screenshots/project-red/Chat Room.jpg';
 import projectRedRequestHistory from '../assets/project-screenshots/project-red/Request history.jpg';
 import snakeGameScreenshot from '../assets/project-screenshots/snake-game-using-js/game.PNG';
+import collabEditorHomepage from '../assets/Collab Editor Homepage.PNG';
+import collabEditorCollaborators from '../assets/project-screenshots/collab-editor/Collaborators.PNG';
+import collabEditorAnotherUser from '../assets/project-screenshots/collab-editor/another user pov.PNG';
+import collabEditorVersionHistory from '../assets/project-screenshots/collab-editor/version history.PNG';
 
 // Project data for portfolio and project detail pages
 export const projectsData = [
@@ -59,6 +63,80 @@ export const projectsData = [
   },
   {
     id: 2,
+    slug: 'chitwan-tour',
+    title: 'Chitwan Tour',
+    category: 'Web Development',
+    tags: ['Next.js', 'Website', 'UI/UX', 'Travel', 'Responsive Design'],
+    description: 'A travel-focused website presenting tour details and booking-focused content for Chitwan.',
+    longDescription:
+      'Chitwan Tour is a live Next.js website focused on destination storytelling, travel package visibility, and conversion-friendly content structure. It is designed for clarity across desktop and mobile screens.',
+    coverImage: chitwanTourHomepage,
+    role: 'Web Developer',
+    duration: 'Completed',
+    impact: 'Delivered a live tourism website with clear user journey and content presentation',
+    tools: ['Next.js', 'JavaScript', 'CSS', 'Figma'],
+    link: 'https://www.chitwantour.com/',
+    github: null,
+    screenshots: [
+      {
+        src: chitwanTourHomepage,
+        alt: 'Chitwan Tour homepage screenshot',
+      },
+      {
+        src: chitwanTourGallery,
+        alt: 'Chitwan Tour gallery screenshot',
+      },
+      {
+        src: chitwanTourServices,
+        alt: 'Chitwan Tour services screenshot',
+      },
+      {
+        src: chitwanTourPlans,
+        alt: 'Chitwan Tour plans screenshot',
+      },
+      {
+        src: chitwanTourWhyUs,
+        alt: 'Chitwan Tour why us screenshot',
+      },
+    ],
+  },
+  {
+    id: 3,
+    slug: 'collab-editor',
+    title: 'Collab Editor',
+    category: 'Full Stack Web App',
+    tags: ['React', 'Node.js', 'Socket.IO', 'Yjs', 'MongoDB'],
+    description: 'A real-time collaborative document editor with live cursor tracking, rich text formatting, and version history.',
+    longDescription:
+      'A real-time collaborative document editor built with React, Node.js, Socket.IO, and Yjs — similar to Google Docs. Multiple users can edit the same document simultaneously with live cursor tracking, rich text formatting, conflict resolution using Yjs CRDTs, and version history.',
+    coverImage: collabEditorHomepage,
+    role: 'Full Stack Developer',
+    duration: 'Completed',
+    impact: 'Built a real-time collaborative platform ensuring conflict-free data sync',
+    tools: ['React', 'Node.js', 'Socket.IO', 'Yjs', 'MongoDB', 'IndexedDB'],
+    link: 'https://collab-editor-cyan.vercel.app/',
+    github: 'https://github.com/AnushAdk04/Collab-Editor',
+    screenshots: [
+      {
+        src: collabEditorHomepage,
+        alt: 'Collab Editor homepage screenshot',
+      },
+      {
+        src: collabEditorCollaborators,
+        alt: 'Collab Editor collaborators screenshot',
+      },
+      {
+        src: collabEditorAnotherUser,
+        alt: 'Collab Editor another user POV screenshot',
+      },
+      {
+        src: collabEditorVersionHistory,
+        alt: 'Collab Editor version history screenshot',
+      },
+    ],
+  },
+  {
+    id: 4,
     slug: 'buyer-portal',
     title: 'Buyer Portal',
     category: 'Full Stack Web App',
@@ -105,7 +183,7 @@ export const projectsData = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     slug: 'snake-game-using-js',
     title: 'Snake Game Using JS',
     category: 'JavaScript Project',
@@ -127,45 +205,8 @@ export const projectsData = [
       },
     ],
   },
-  {
-    id: 4,
-    slug: 'chitwan-tour',
-    title: 'Chitwan Tour',
-    category: 'Web Development',
-    tags: ['Next.js', 'Website', 'UI/UX', 'Travel', 'Responsive Design'],
-    description: 'A travel-focused website presenting tour details and booking-focused content for Chitwan.',
-    longDescription:
-      'Chitwan Tour is a live Next.js website focused on destination storytelling, travel package visibility, and conversion-friendly content structure. It is designed for clarity across desktop and mobile screens.',
-    coverImage: chitwanTourHomepage,
-    role: 'Web Developer',
-    duration: 'Completed',
-    impact: 'Delivered a live tourism website with clear user journey and content presentation',
-    tools: ['Next.js', 'JavaScript', 'CSS', 'Figma'],
-    link: 'https://www.chitwantour.com/',
-    github: null,
-    screenshots: [
-      {
-        src: chitwanTourHomepage,
-        alt: 'Chitwan Tour homepage screenshot',
-      },
-      {
-        src: chitwanTourGallery,
-        alt: 'Chitwan Tour gallery screenshot',
-      },
-      {
-        src: chitwanTourServices,
-        alt: 'Chitwan Tour services screenshot',
-      },
-      {
-        src: chitwanTourPlans,
-        alt: 'Chitwan Tour plans screenshot',
-      },
-      {
-        src: chitwanTourWhyUs,
-        alt: 'Chitwan Tour why us screenshot',
-      },
-    ],
-  },
+  
+  
 ];
 
 export const projectCategories = ['All', 'Full Stack Web App', 'Web Development', 'JavaScript Project'];
