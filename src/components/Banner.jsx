@@ -12,7 +12,7 @@ const Banner = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Full Stack Developer', 'React & Node.js Developer', 'UI/UX Designer'],
+      strings: ['Full Stack Developer', 'React &amp; Node.js Developer', 'UI/UX Designer'],
       startDelay: 100,
       typeSpeed: 50,
       backSpeed: 10,

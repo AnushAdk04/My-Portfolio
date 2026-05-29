@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaNode, FaFigma, FaPalette, FaPaintBrush, FaHtml5, FaCss3Alt, FaDatabase, FaCloud } from 'react-icons/fa';
-import { SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiExpress, SiMysql, SiPostgresql, SiMongodb, SiSupabase, SiPostman, SiCloudinary } from 'react-icons/si';
+import { FaReact, FaNode, FaFigma, FaPalette, FaPaintBrush, FaHtml5, FaCss3Alt, FaDatabase, FaCloud, FaPaperPlane, FaPhotoVideo } from 'react-icons/fa';
+import { SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiExpress, SiMysql, SiPostgresql, SiMongodb, SiSupabase, SiPostman, SiCloudinary, SiVercel, SiFirebase, SiRedis, SiGithubcopilot, SiAnthropic } from 'react-icons/si';
 import bannerImage from '../assets/myphoto2.png';
 import { SectionWrapper } from './index';
 
@@ -27,6 +27,8 @@ const About = () => {
         { name: 'Node.js', icon: FaNode, color: 'text-green-600' },
         { name: 'Express.js', icon: SiExpress, color: 'text-slate-700' },
         { name: 'Supabase', icon: SiSupabase, color: 'text-emerald-500' },
+        { name: 'Firebase', icon: SiFirebase, color: 'text-amber-500' },
+        { name: 'Resend', icon: FaPaperPlane, color: 'text-slate-600' },
         { name: 'Postman', icon: SiPostman, color: 'text-orange-500' },
       ],
     },
@@ -36,6 +38,8 @@ const About = () => {
         { name: 'MySQL', icon: SiMysql, color: 'text-blue-500' },
         { name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-700' },
         { name: 'MongoDB', icon: SiMongodb, color: 'text-green-700' },
+        { name: 'Upstash Redis', icon: SiRedis, color: 'text-red-500' },
+        { name: 'Vercel', icon: SiVercel, color: 'text-slate-900' },
         { name: 'Cloudinary', icon: SiCloudinary, color: 'text-sky-500' },
         { name: 'Render', icon: FaCloud, color: 'text-indigo-500' },
         { name: 'Database Design', icon: FaDatabase, color: 'text-slate-600' },
@@ -45,30 +49,44 @@ const About = () => {
       category: 'Design',
       items: [
         { name: 'Figma', icon: FaFigma, color: 'text-purple-500' },
+        { name: 'Adobe Photoshop', icon: FaPhotoVideo, color: 'text-blue-800' },
         { name: 'UI Wireframing', icon: FaPaintBrush, color: 'text-blue-600' },
         { name: 'UI/UX Design', icon: FaPalette, color: 'text-pink-500' },
+      ],
+    },
+    {
+      category: 'Preferred AI Agents',
+      items: [
+        { name: 'GitHub Copilot', icon: SiGithubcopilot, color: 'text-indigo-500' },
+        { name: 'Claude AI', icon: SiAnthropic, color: 'text-orange-600' },
       ],
     },
   ];
 
   const experience = [
     {
-      year: '2022 - Present',
+      year: '2025 Nov - Present',
       title: 'Full Stack Developer',
-      company: 'Creative Studios',
-      description: 'Building full stack web applications with React, Node.js, Express, and production-focused deployment workflows.',
+      company: 'Gravity Inc Pvt. Ltd',
+      description: 'Working as a full stack developer at Gravity Inc Pvt. Ltd, building and maintaining web applications with modern technologies.',
     },
     {
-      year: '2021 - 2022',
-      title: 'Web Developer',
-      company: 'Design Hub',
-      description: 'Developed responsive web experiences and translated Figma UI/UX flows into production-ready interfaces.',
+      year: '2025 Sept - 2026 Jan',
+      title: 'React.js Developer/Instructor',
+      company: 'Chitwan College of Technology',
+      description: 'Working with students on various React.js projects and making them efficient in React.js and web development.',
     },
     {
-      year: '2020 - 2021',
-      title: 'Junior Full Stack Developer',
-      company: 'Tech Solutions',
-      description: 'Worked across frontend and backend modules with JavaScript, databases, and API integration.',
+      year: '2025 Jan - 2025 Jun',
+      title: 'UI/UX Designer/Instructor',
+      company: 'Chitwan College of Technology',
+      description: 'Teaching UI/UX design to students and working on various UI/UX design projects.',
+    },
+    {
+      year: '2024 Apr - 2025 Feb',
+      title: 'Next.js Developer',
+      company: 'Nexus Code n Tech Pvt. Ltd',
+      description: 'Developed and maintained a range of web applications using Next.js and related technologies. Contributed to front-end development, feature implementation, and performance optimization. Collaborated with cross-functional teams to deliver high-quality software solutions.',
     },
   ];
 
