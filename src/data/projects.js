@@ -1,9 +1,15 @@
-import buyerPortalDashboard from '../assets/project-screenshots/buyer-portal/dashboard.PNG';
 import buyerPortalLightMode from '../assets/project-screenshots/buyer-portal/light mode.PNG';
 import buyerPortalLogin from '../assets/project-screenshots/buyer-portal/login.PNG';
 import buyerPortalProfile from '../assets/project-screenshots/buyer-portal/profile.PNG';
 import buyerPortalSellerProfile from '../assets/project-screenshots/buyer-portal/seller profile.PNG';
 import buyerPortalUploadProperty from '../assets/project-screenshots/buyer-portal/upload property.PNG';
+import buyerPortalHomepage from '../assets/project-screenshots/buyer-portal/Homepage.PNG';
+import buyerPortalAIAssistant from '../assets/project-screenshots/buyer-portal/AI Assistant.PNG';
+import buyerPortalAboutPage from '../assets/project-screenshots/buyer-portal/About page.PNG';
+import buyerPortalAdminDashboard from '../assets/project-screenshots/buyer-portal/Admin dashboard.PNG';
+import buyerPortalEMICalculator from '../assets/project-screenshots/buyer-portal/EMI calculator.PNG';
+import buyerPortalPropertyInquiries from '../assets/project-screenshots/buyer-portal/property Inquiries.PNG';
+import buyerPortalPropertyMap from '../assets/project-screenshots/buyer-portal/property description and map.PNG';
 import chitwanTourHomepage from '../assets/project-screenshots/chitwan-tour/homepage.PNG';
 import chitwanTourGallery from '../assets/project-screenshots/chitwan-tour/gallery.PNG';
 import chitwanTourServices from '../assets/project-screenshots/chitwan-tour/services.PNG';
@@ -20,8 +26,59 @@ import collabEditorCollaborators from '../assets/project-screenshots/collab-edit
 import collabEditorAnotherUser from '../assets/project-screenshots/collab-editor/another user pov.PNG';
 import collabEditorVersionHistory from '../assets/project-screenshots/collab-editor/version history.PNG';
 
+// Syncra Screenshots
+import syncraAudioVideoRoom from '../assets/project-screenshots/syncra/audio and video room.PNG';
+import syncraGeneralChat from '../assets/project-screenshots/syncra/general chat.PNG';
+import syncraOrgAnalytics from '../assets/project-screenshots/syncra/org analytics.PNG';
+import syncraOrgCreate from '../assets/project-screenshots/syncra/org create.PNG';
+import syncraOrgSettings from '../assets/project-screenshots/syncra/org settings.PNG';
+import syncraProfileAndStatus from '../assets/project-screenshots/syncra/profile and status.PNG';
+
 // Project data for portfolio and project detail pages
 export const projectsData = [
+  {
+    id: 6,
+    slug: 'syncra',
+    title: 'Syncra',
+    category: 'Full Stack Web App',
+    tags: ['Next.js', 'Supabase', 'TypeScript', 'Tailwind CSS', 'Socket.io', 'WebRTC', 'Gemini AI'],
+    description: 'A flagship real-time team collaboration platform with chat, WebRTC audio/video rooms, multi-tenancy, and AI channel summaries.',
+    longDescription:
+      'Syncra is a flagship, production-grade real-time team collaboration platform (similar to Slack) built as a multi-tenant SaaS. It features full-featured real-time chat with optimistic UI updates, emoji reactions, nested threads, and drag-and-drop file storage. It also supports screen sharing and recording in WebRTC audio/video rooms, role-based access control (RBAC), automatic email invites, online presence, live analytics dashboards, system-aware dark/light modes, rate limiting, and an AI \'Catch me up\' channel summary powered by Gemini 1.5 Flash.',
+    coverImage: syncraGeneralChat,
+    role: 'Full Stack Developer',
+    duration: 'Completed',
+    impact: 'Designed and built a highly secure, multi-tenant SaaS architecture supporting real-time messaging, WebRTC conferencing, and automated AI insights.',
+    tools: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Socket.io', 'WebRTC', 'Google Gemini AI', 'Upstash Redis', 'Resend'],
+    link: 'https://syncra-liard.vercel.app',
+    github: 'https://github.com/AnushAdk04/syncra',
+    screenshots: [
+      {
+        src: syncraGeneralChat,
+        alt: 'Syncra general chat interface with channel messages, emoji reactions, and sidebar',
+      },
+      {
+        src: syncraAudioVideoRoom,
+        alt: 'Real-time mesh-topology WebRTC video and audio meeting room with controls',
+      },
+      {
+        src: syncraOrgAnalytics,
+        alt: 'Organization analytics dashboard showing daily activity, top members, and channel stats',
+      },
+      {
+        src: syncraOrgSettings,
+        alt: 'Organization settings panel for member management, roles, and inviting teammates',
+      },
+      {
+        src: syncraProfileAndStatus,
+        alt: 'User profile customization modal with custom status and emoji selection',
+      },
+      {
+        src: syncraOrgCreate,
+        alt: 'Create workspace screen for initializing a new multi-tenant organization',
+      },
+    ],
+  },
   {
     id: 1,
     slug: 'project-red',
@@ -140,45 +197,65 @@ export const projectsData = [
     slug: 'buyer-portal',
     title: 'Buyer Portal',
     category: 'Full Stack Web App',
-    tags: ['React', 'Node.js', 'Express', 'MySQL', 'PostgreSQL', 'TypeScript'],
-    description: 'A modern property discovery and listing portal with clean dashboard and property detail experience.',
+    tags: ['React 19', 'Node.js', 'Express', 'PostgreSQL', 'Leaflet.js', 'Tailwind CSS'],
+    description: 'A full-stack, production-ready real estate portal where users can discover, compare, and manage properties with ease.',
     longDescription:
-      'Buyer Portal is a property-focused web application with polished card layouts, listing details, and streamlined user actions. It is designed around clarity and speed with dark UI patterns and practical workflow actions.',
-    coverImage: buyerPortalDashboard,
+      'Buyer Portal is a comprehensive, full-stack real estate marketplace designed for buyers, sellers, and administrators. It features a robust high-performance search engine, interactive maps via Leaflet.js with pin clustering, dynamic EMI visualization and analytics via Recharts, and a data-driven admin dashboard, all wrapped in a sleek glassmorphic React 19 UI. Users can promote and feature properties via eSewa and Khalti sandbox checkouts. The system supports full role-based access control, JWT authentication, auto-optimized image transforms via Cloudinary, and transactional email alerts via Resend.',
+    coverImage: buyerPortalHomepage,
     role: 'Full Stack Developer',
-    duration: 'Ongoing',
-    impact: 'Delivered a production-ready UI and listing flow for property exploration',
-    tools: ['React.js', 'TypeScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Render'],
+    duration: 'Completed',
+    impact: 'Delivered a high-performance property exploration ecosystem with integrated sandbox payments and seamless geographic mapping.',
+    tools: ['React 19', 'Vite 8', 'PostgreSQL', 'Node.js', 'Express.js', 'Tailwind CSS', 'Leaflet.js', 'Recharts', 'Cloudinary', 'Resend', 'eSewa & Khalti APIs'],
     link: 'https://buyer-portal-alpha.vercel.app/',
     github: 'https://github.com/AnushAdk04/Buyer-Portal',
     screenshots: [
       {
-        src: buyerPortalDashboard,
-        alt: 'Buyer Portal property detail screenshot',
+        src: buyerPortalHomepage,
+        alt: 'Buyer Portal homepage showing premium property marketplace search interface',
       },
       {
-        src: buyerPortalDashboard,
-        alt: 'Buyer Portal dashboard screenshot',
+        src: buyerPortalPropertyMap,
+        alt: 'Property details with interactive Leaflet.js map and description',
       },
       {
-        src: buyerPortalLogin,
-        alt: 'Buyer Portal login screen screenshot',
+        src: buyerPortalAdminDashboard,
+        alt: 'Admin analytics dashboard with user, properties, and payment statistics',
+      },
+      {
+        src: buyerPortalEMICalculator,
+        alt: 'EMI Mortgage loan calculator with interactive visualization',
+      },
+      {
+        src: buyerPortalAIAssistant,
+        alt: 'AI assistant chat interface for property recommendations and assistance',
       },
       {
         src: buyerPortalUploadProperty,
-        alt: 'Buyer Portal upload property screenshot',
+        alt: 'Upload property listing form with image upload inputs',
       },
       {
-        src: buyerPortalProfile,
-        alt: 'Buyer Portal profile screenshot',
+        src: buyerPortalPropertyInquiries,
+        alt: 'Property inquiries and messages management panel',
       },
       {
-        src: buyerPortalSellerProfile,
-        alt: 'Buyer Portal seller profile screenshot',
+        src: buyerPortalAboutPage,
+        alt: 'About page explaining platform features and services',
       },
       {
         src: buyerPortalLightMode,
-        alt: 'Buyer Portal light mode screenshot',
+        alt: 'Light mode display of the marketplace search results',
+      },
+      {
+        src: buyerPortalProfile,
+        alt: 'User profile and saved favorites panel',
+      },
+      {
+        src: buyerPortalSellerProfile,
+        alt: 'Seller dashboard and details page',
+      },
+      {
+        src: buyerPortalLogin,
+        alt: 'Sleek login screen showing security check integration',
       },
     ],
   },
@@ -205,8 +282,8 @@ export const projectsData = [
       },
     ],
   },
-  
-  
+
+
 ];
 
 export const projectCategories = ['All', 'Full Stack Web App', 'Web Development', 'JavaScript Project'];

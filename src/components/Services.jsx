@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaPalette } from 'react-icons/fa';
+import { FaCode, FaPalette, FaMobileAlt } from 'react-icons/fa';
 import { SectionWrapper, Button } from './index';
 import fullStackImage from '../assets/Project RED Image.jpg';
 import uiUxImage from '../assets/Buyers portal.PNG';
+import mobileAppImage from '../assets/mobile app development.png';
 
 const Services = () => {
   const services = [
@@ -24,6 +25,15 @@ const Services = () => {
       link: 'https://www.figma.com/proto/LLNlSLIgSEz2ijiS30GAw4/Movie-Ticket?node-id=1-5&t=G6X4zN3PWIjjJXfg-1&scaling=scale-down&page-id=0%3A1',
       color: 'from-orange-500 to-rose-500',
       image: uiUxImage,
+    },
+    {
+      icon: FaMobileAlt,
+      title: 'Mobile App Development',
+      description:
+        'I develop modern, high-performance, and responsive cross-platform mobile applications for Android and iOS using Flutter, ensuring smooth animations, native-like speed, and premium user experience.',
+      link: null,
+      color: 'from-emerald-500 to-teal-500',
+      image: mobileAppImage,
     },
   ];
 
@@ -49,11 +59,11 @@ const Services = () => {
   return (
     <SectionWrapper
       title="My Services"
-      subtitle="Full stack product development and UI/UX design services"
+      subtitle="Full stack product development, mobile applications, and UI/UX design services"
       variant="alternate"
     >
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

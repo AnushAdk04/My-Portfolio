@@ -6,7 +6,10 @@ import { Card } from './index';
 import { projectsData } from '../data/projects';
 
 const FeaturedProjects = () => {
-  const projects = projectsData;
+  const featuredSlugs = ['syncra', 'project-red', 'chitwan-tour', 'buyer-portal'];
+  const projects = featuredSlugs
+    .map((slug) => projectsData.find((p) => p.slug === slug))
+    .filter(Boolean);
 
   const containerVariants = {
     hidden: { opacity: 0 },
