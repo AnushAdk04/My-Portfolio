@@ -1,41 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaPalette, FaMobileAlt } from 'react-icons/fa';
-import { SectionWrapper, Button } from './index';
-import fullStackImage from '../assets/Project RED Image.jpg';
-import uiUxImage from '../assets/Buyers portal.PNG';
-import mobileAppImage from '../assets/mobile app development.png';
+import { Link } from 'react-router-dom';
+import { SectionWrapper } from './index';
+import { servicesData } from '../data/services';
 
 const Services = () => {
-  const services = [
-    {
-      icon: FaCode,
-      title: 'Full Stack Web Development',
-      description:
-        'I build complete web applications from frontend to backend using React.js, Next.js, Node.js, Express.js, TypeScript, and modern databases like MySQL, PostgreSQL, MongoDB, and Supabase.',
-      link: 'https://github.com/AnushAdk04',
-      color: 'from-blue-500 to-cyan-500',
-      image: fullStackImage,
-    },
-    {
-      icon: FaPalette,
-      title: 'UI/UX Designing',
-      description:
-        'I design clean and user-centered interfaces in Figma with strong attention to usability, visual hierarchy, and conversion-focused flows for modern products.',
-      link: 'https://www.figma.com/proto/LLNlSLIgSEz2ijiS30GAw4/Movie-Ticket?node-id=1-5&t=G6X4zN3PWIjjJXfg-1&scaling=scale-down&page-id=0%3A1',
-      color: 'from-orange-500 to-rose-500',
-      image: uiUxImage,
-    },
-    {
-      icon: FaMobileAlt,
-      title: 'Mobile App Development',
-      description:
-        'I develop modern, high-performance, and responsive cross-platform mobile applications for Android and iOS using Flutter, ensuring smooth animations, native-like speed, and premium user experience.',
-      link: null,
-      color: 'from-emerald-500 to-teal-500',
-      image: mobileAppImage,
-    },
-  ];
+  const MotionLink = motion(Link);
+
+  const services = servicesData.map((service) => ({
+    ...service,
+    icon:
+      service.slug === 'website-development'
+        ? FaCode
+        : service.slug === 'ui-ux-designing'
+          ? FaPalette
+          : FaMobileAlt,
+    color:
+      service.slug === 'website-development'
+        ? 'from-blue-500 to-cyan-500'
+        : service.slug === 'ui-ux-designing'
+          ? 'from-orange-500 to-rose-500'
+          : 'from-emerald-500 to-teal-500',
+  }));
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -78,7 +65,7 @@ const Services = () => {
               className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex h-full flex-col"
             >
               <div className="h-48 overflow-hidden bg-slate-100 relative">
-                <img src={service.image} alt={service.title} className="w-full h-full object-cover" />
+                <img src={service.thumbnail} alt={service.title} className="w-full h-full object-cover" />
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-35`} />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Icon className="text-5xl text-white drop-shadow-lg" />
@@ -86,19 +73,18 @@ const Services = () => {
               </div>
               <div className="p-8 flex flex-1 flex-col">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
-                <p className="text-slate-600 text-lg leading-relaxed mb-6">{service.description}</p>
+                <p className="text-slate-600 text-lg leading-relaxed mb-6">{service.shortDescription}</p>
                 <div className="mt-auto pt-4">
-                  {service.link ? (
-                    <a href={service.link} target="_blank" rel="noopener noreferrer" className="block">
-                      <Button variant="primary" size="md" className="w-full text-center">
-                        Learn More
-                      </Button>
-                    </a>
-                  ) : (
-                    <Button variant="secondary" size="md" className="w-full text-center">
-                      Coming Soon
-                    </Button>
-                  )}
+                  <MotionLink
+                    to={`/services/${service.slug}`}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="block"
+                  >
+                    <div className="w-full rounded-lg bg-orange-600 px-4 py-2 text-center font-medium text-white shadow-md transition-colors hover:bg-orange-700">
+                      Learn More
+                    </div>
+                  </MotionLink>
                 </div>
               </div>
             </motion.div>
