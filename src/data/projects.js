@@ -34,8 +34,103 @@ import syncraOrgCreate from '../assets/project-screenshots/syncra/org create.PNG
 import syncraOrgSettings from '../assets/project-screenshots/syncra/org settings.PNG';
 import syncraProfileAndStatus from '../assets/project-screenshots/syncra/profile and status.PNG';
 
+// SpendWise Screenshots
+import spendwiseAddExpense from '../assets/project-screenshots/spendwise/spendwise add expense.jpeg';
+import spendwiseHomeScreen from '../assets/project-screenshots/spendwise/spendwise home screen.jpeg';
+import spendwiseLoginPage from '../assets/project-screenshots/spendwise/spendwise login page.jpeg';
+import spendwiseSummaryScreen from '../assets/project-screenshots/spendwise/spendwise summary screen.jpeg';
+
+// Chess 3D Screenshots
+import chess3dHomeScreen from '../assets/project-screenshots/chess-3d/Home Screen.PNG';
+import chess3dPiecesMoving from '../assets/project-screenshots/chess-3d/Pieces Moving.PNG';
+import chess3dCheckmate from '../assets/project-screenshots/chess-3d/checkmate.PNG';
+import chess3dAttacking from '../assets/project-screenshots/chess-3d/pawn attacking with moves sidebar visible.PNG';
+
 // Project data for portfolio and project detail pages
 export const projectsData = [
+  {
+    id: 8,
+    slug: 'chess-3d',
+    title: 'Chess 3D',
+    category: 'Fun and Games',
+    tags: ['Next.js 14', 'React Three Fiber', 'Three.js', 'TypeScript', 'Zustand', 'Chess.js'],
+    description: 'A fully interactive 3D Chess game built with Next.js, Three.js, React Three Fiber, and Chess.js.',
+    longDescription:
+      'Chess 3D is a highly interactive, responsive 3D chess application powered by Next.js 14 (App Router) and React Three Fiber (R3F) for Three.js rendering. It features a complete 3D chessboard with custom wooden PBR materials and six procedurally modeled chess pieces (Pawn, Rook, Knight, Bishop, Queen, King) styled in gold metallic for White and slate grey for Black. The game fully enforces standard chess rules (including check, checkmate, stalemate, and draws) using Chess.js, dynamically rotating the board to face the active player side with smooth orbit animations. It includes click-to-move interactions with move-indicator dots and capture ring highlights, side-border captured piece docks, a pawn promotion selection modal, an active move history sidebar panel, and a game over overlay. The application is built with TypeScript and Zustand state management, and is deployed to Vercel.',
+    coverImage: chess3dHomeScreen,
+    role: 'Frontend/3D Developer',
+    duration: 'Completed',
+    impact: 'Created an immersive 3D board game experience combining advanced WebGL shaders, procedurally generated geometry, and full game state logic.',
+    tools: ['Next.js 14', 'TypeScript', 'React Three Fiber', 'Three.js', '@react-three/drei', 'Chess.js', 'Zustand', 'Tailwind CSS'],
+    link: 'https://chess-3-d-iota.vercel.app/',
+    github: 'https://github.com/AnushAdk04/Chess-3D',
+    screenshots: [
+      {
+        src: chess3dHomeScreen,
+        alt: 'Chess 3D landing and initial game configuration home screen layout',
+      },
+      {
+        src: chess3dPiecesMoving,
+        alt: 'Fully interactive 3D board layout with pieces moving and legal movement dot indicators',
+      },
+      {
+        src: chess3dCheckmate,
+        alt: 'Checkmate game over state overlay featuring play again options and active moves list',
+      },
+      {
+        src: chess3dAttacking,
+        alt: 'Detailed board preview showing pawn attacking with active move history sidebar panel visible',
+      },
+    ],
+  },
+  {
+    id: 7,
+    slug: 'spendwise',
+    title: 'SpendWise',
+    category: 'Mobile App Development',
+    tags: ['Flutter', 'Dart', 'Firebase', 'FCM', 'Provider', 'Offline Cache'],
+    description: 'A feature-rich personal finance tracking mobile app with real-time sync, offline-first support, and push notifications.',
+    longDescription:
+      'SpendWise is a premium, offline-first personal finance tracking mobile application built with Flutter and Dart. It features secure email/password authentication using Firebase Auth and a complete CRUD interface for managing expenses across 8 pre-defined categories. The app guarantees a seamless user experience even without an active internet connection using Cloud Firestore offline persistence, displaying "Pending Sync" indicators for local edits and auto-synchronizing modifications upon reconnection. Additionally, it features dynamic monthly summaries with per-category progress bars, top expense highlights, configured local daily reminders, push notifications via Firebase Cloud Messaging, and elegant Material 3 purple styling with interactive swipe-to-delete gestures.',
+    coverImage: spendwiseHomeScreen,
+    role: 'Mobile App Developer',
+    duration: 'Completed',
+    impact: 'Designed and implemented an offline-first architecture with automatic Firestore synchronization, localized time-zone-aware notifications, and high-performance list swiping.',
+    tools: [
+      'Flutter 3.x',
+      'Dart',
+      'Firebase Auth',
+      'Cloud Firestore',
+      'Firestore Persistence',
+      'Firebase Cloud Messaging (FCM)',
+      'flutter_local_notifications',
+      'Provider',
+      'connectivity_plus',
+      'timezone',
+      'uuid',
+      'intl',
+    ],
+    link: 'https://github.com/AnushAdk04/spendwise/releases/tag/v1.0.0',
+    github: 'https://github.com/AnushAdk04/spendwise',
+    screenshots: [
+      {
+        src: spendwiseLoginPage,
+        alt: 'SpendWise secure email and password login page powered by Firebase Auth',
+      },
+      {
+        src: spendwiseHomeScreen,
+        alt: 'SpendWise main dashboard showcasing recent transactions list with search and categories filter',
+      },
+      {
+        src: spendwiseAddExpense,
+        alt: 'SpendWise form interface to add, edit, or delete expenses with category picker and date selector',
+      },
+      {
+        src: spendwiseSummaryScreen,
+        alt: 'SpendWise monthly summary screen showcasing category expenditure breakdown with progress bars and top transactions',
+      },
+    ],
+  },
   {
     id: 6,
     slug: 'syncra',
@@ -263,7 +358,7 @@ export const projectsData = [
     id: 5,
     slug: 'snake-game-using-js',
     title: 'Snake Game Using JS',
-    category: 'JavaScript Project',
+    category: 'Fun and Games',
     tags: ['JavaScript', 'HTML', 'CSS', 'Game Logic'],
     description: 'Classic snake game built with JavaScript, featuring keyboard controls and score progression.',
     longDescription:
@@ -286,6 +381,6 @@ export const projectsData = [
 
 ];
 
-export const projectCategories = ['All', 'Full Stack Web App', 'Web Development', 'JavaScript Project'];
+export const projectCategories = ['All', 'Full Stack Web App', 'Web Development', 'Mobile App Development', 'Fun and Games'];
 
 export const getProjectBySlug = (slug) => projectsData.find((project) => project.slug === slug);

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { FaArrowLeft, FaExternalLinkAlt, FaGithub, FaDownload } from 'react-icons/fa';
 import { getProjectBySlug } from '../data/projects';
 import { setSEOMetadata } from '../utils/seo';
 import { Button } from '../components';
@@ -57,7 +57,11 @@ const ProjectDetailsPage = () => {
             <img
               src={project.coverImage}
               alt={`${project.title} cover`}
-              className="w-full h-[340px] object-cover rounded-xl"
+              className={
+                project.category === 'Mobile App Development'
+                  ? 'w-full h-[340px] object-contain rounded-xl bg-slate-100/50 p-2'
+                  : 'w-full h-[340px] object-cover rounded-xl'
+              }
             />
           </motion.div>
 
@@ -99,8 +103,17 @@ const ProjectDetailsPage = () => {
               {project.link && (
                 <a href={project.link} target="_blank" rel="noopener noreferrer">
                   <Button variant="primary" size="md" className="flex items-center gap-2">
-                    <FaExternalLinkAlt size={15} />
-                    Live Demo
+                    {project.category === 'Mobile App Development' ? (
+                      <>
+                        <FaDownload size={15} />
+                        Download APK
+                      </>
+                    ) : (
+                      <>
+                        <FaExternalLinkAlt size={15} />
+                        Live Demo
+                      </>
+                    )}
                   </Button>
                 </a>
               )}
@@ -123,16 +136,24 @@ const ProjectDetailsPage = () => {
           className="bg-white rounded-2xl p-8 shadow-md"
         >
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Project Screenshots</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className={
+            project.category === 'Mobile App Development'
+              ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'
+              : 'grid grid-cols-1 md:grid-cols-2 gap-6'
+          }>
             {project.screenshots.map((shot, index) => (
-              <figure key={`${project.slug}-${index}`} className="space-y-3">
+              <figure key={`${project.slug}-${index}`} className="space-y-3 flex flex-col items-center text-center">
                 <img
                   src={shot.src}
                   alt={shot.alt}
-                  className="w-full h-64 object-cover rounded-xl border border-slate-200"
+                  className={
+                    project.category === 'Mobile App Development'
+                      ? 'w-full h-auto object-contain rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300'
+                      : 'w-full h-64 object-cover rounded-xl border border-slate-200'
+                  }
                   loading="lazy"
                 />
-                <figcaption className="text-sm text-slate-600">{shot.alt}</figcaption>
+                <figcaption className="text-sm text-slate-600 mt-2">{shot.alt}</figcaption>
               </figure>
             ))}
           </div>

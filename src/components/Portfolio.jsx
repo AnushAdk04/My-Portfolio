@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { projectsData, projectCategories } from '../data/projects';
 import { Card, Button } from './index';
-import { FaExternalLinkAlt, FaGithub, FaInfoCircle } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub, FaInfoCircle, FaDownload } from 'react-icons/fa';
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -123,8 +123,17 @@ const Portfolio = () => {
                     {project.link && (
                       <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex-1">
                         <Button variant="primary" size="md" className="w-full flex items-center justify-center gap-2">
-                          <FaExternalLinkAlt size={16} />
-                          View
+                          {project.category === 'Mobile App Development' ? (
+                            <>
+                              <FaDownload size={16} />
+                              Download APK
+                            </>
+                          ) : (
+                            <>
+                              <FaExternalLinkAlt size={16} />
+                              View
+                            </>
+                          )}
                         </Button>
                       </a>
                     )}
