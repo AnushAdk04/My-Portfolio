@@ -26,6 +26,12 @@ import collabEditorCollaborators from '../assets/project-screenshots/collab-edit
 import collabEditorAnotherUser from '../assets/project-screenshots/collab-editor/another user pov.PNG';
 import collabEditorVersionHistory from '../assets/project-screenshots/collab-editor/version history.PNG';
 
+// POS App Screenshots
+import posDashboard from '../assets/project-screenshots/pos app/dashboard.jpeg';
+import posBillingAndCart from '../assets/project-screenshots/pos app/billing and cart.jpeg';
+import posBillsHistory from '../assets/project-screenshots/pos app/bills and transaction history.jpeg';
+import posGeneratedPdfBill from '../assets/project-screenshots/pos app/generated bill as a pdf.jpeg';
+
 // Syncra Screenshots
 import syncraAudioVideoRoom from '../assets/project-screenshots/syncra/audio and video room.PNG';
 import syncraGeneralChat from '../assets/project-screenshots/syncra/general chat.PNG';
@@ -46,8 +52,80 @@ import chess3dPiecesMoving from '../assets/project-screenshots/chess-3d/Pieces M
 import chess3dCheckmate from '../assets/project-screenshots/chess-3d/checkmate.PNG';
 import chess3dAttacking from '../assets/project-screenshots/chess-3d/pawn attacking with moves sidebar visible.PNG';
 
+// RAG Chatbot Screenshots
+import ragChatbotThumbnail from '../assets/project-screenshots/RAG Chatbot/home screen thumbnail.PNG';
+
 // Project data for portfolio and project detail pages
 export const projectsData = [
+  {
+    id: 10,
+    slug: 'pos-inventory-management-app',
+    title: 'Point of Sale (POS) and Inventory Management App',
+    category: 'Mobile App Development',
+    tags: ['Flutter', 'Dart', 'Riverpod', 'SQLite', 'Barcode Scanner', 'PDF Generation'],
+    description: 'A full-featured, offline-first POS and inventory management mobile app built for small retail shops and supermarkets.',
+    longDescription:
+      'POS App is an offline-first Point of Sale and Inventory Management application built with Flutter 3.x and Riverpod 2.x. It supports product CRUD, barcode scanning through camera input, live cart operations with strict stock validation, and one-tap checkout with automatic stock deduction. Every transaction generates a unique bill number and an A4-formatted PDF receipt using pdf + printing, with system print/share support. The app also includes complete billing history, itemized bill review, and re-print/re-share capabilities, making it practical for real-world small business operations on a single device.',
+    coverImage: posGeneratedPdfBill,
+    role: 'Mobile App Developer',
+    duration: 'Completed (v1.0.0)',
+    impact: 'Built a production-ready, offline retail workflow that combines fast barcode-based checkout, reliable local persistence, and printable receipt generation.',
+    tools: [
+      'Flutter 3.x',
+      'Dart',
+      'Riverpod 2.x',
+      'SQLite (sqflite)',
+      'mobile_scanner',
+      'pdf',
+      'printing',
+      'uuid',
+      'intl',
+      'path',
+    ],
+    link: 'https://github.com/AnushAdk04/pos-app/releases',
+    github: 'https://github.com/AnushAdk04/pos-app',
+    screenshots: [
+      {
+        src: posDashboard,
+        alt: 'POS app dashboard with inventory overview and quick actions',
+      },
+      {
+        src: posBillingAndCart,
+        alt: 'Billing and cart screen showing real-time quantity controls and stock-aware checkout',
+      },
+      {
+        src: posBillsHistory,
+        alt: 'Bills and transaction history screen with past invoices and itemized records',
+      },
+      {
+        src: posGeneratedPdfBill,
+        alt: 'Generated A4 PDF bill preview ready for print or share',
+      },
+    ],
+  },
+  {
+    id: 9,
+    slug: 'rag-chatbot',
+    title: 'RAG Chatbot',
+    category: 'Full Stack Web App',
+    tags: ['FastAPI', 'LangChain', 'ChromaDB', 'Groq', 'Python', 'Bilingual AI'],
+    description: 'A production-ready Retrieval-Augmented Generation (RAG) chatbot designed for uploading PDFs and asking questions in both English and Nepali.',
+    longDescription:
+      'RAG Chatbot is a production-ready, bilingual Retrieval-Augmented Generation (RAG) system built to serve users. It allows users to upload any PDF document, which is automatically parsed, split into optimized text chunks, and indexed into a local vector database. When a user asks a question, a custom LangChain LCEL retrieval pipeline retrieves the most relevant contexts to generate answers. The chatbot stands out with its bilingual capabilities—generating responses in both English and Nepali (Devanagari script) simultaneously—along with localization features such as Nepali Rupees (रु) currency awareness. The system has a FastAPI backend serving REST endpoints and auto-generated API docs (/docs), and a lightweight vanilla HTML/CSS/JS frontend. By leveraging the Groq free tier and custom lightweight embeddings, the entire application stack runs with zero server-side resource cost.',
+    coverImage: ragChatbotThumbnail,
+    role: 'Full Stack AI Developer',
+    duration: 'Completed',
+    impact: 'Designed and deployed a bilingual AI assistant with zero infrastructure cost, delivering contextually accurate document retrieval and localization for South Asian users.',
+    tools: ['FastAPI', 'LangChain LCEL', 'ChromaDB', 'Groq API (llama-3.1-8b-instant)', 'Python', 'PyPDF', 'HTML5', 'CSS3', 'JavaScript'],
+    link: 'https://rag-chatbot-0p3m.onrender.com',
+    github: 'https://github.com/AnushAdk04/RAG-Chatbot',
+    screenshots: [
+      {
+        src: ragChatbotThumbnail,
+        alt: 'RAG Chatbot home screen layout showing PDF upload section and active chat interface',
+      },
+    ],
+  },
   {
     id: 8,
     slug: 'chess-3d',
