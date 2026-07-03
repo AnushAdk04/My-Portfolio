@@ -55,8 +55,80 @@ import chess3dAttacking from '../assets/project-screenshots/chess-3d/pawn attack
 // RAG Chatbot Screenshots
 import ragChatbotThumbnail from '../assets/project-screenshots/RAG Chatbot/home screen thumbnail.PNG';
 
+//Code-Arena Screenshots
+import codeArenaAnalytics from '../assets/project-screenshots/code-arena/analytics.PNG'
+import codeArenaDashboard from '../assets/project-screenshots/code-arena/dashboard.PNG'
+import interviewFeedback from '../assets/project-screenshots/code-arena/detailed interview feedback and interview recording.PNG'
+import interviewSection from '../assets/project-screenshots/code-arena/interviews section.PNG'
+import problemDetails from '../assets/project-screenshots/code-arena/problems details and test cases.PNG'
+import problemList from '../assets/project-screenshots/code-arena/problems.PNG'
+
 // Project data for portfolio and project detail pages
 export const projectsData = [
+  {
+    id: 11,
+    slug: 'code-arena',
+    title: 'Code Arena',
+    category: 'Full Stack Web App',
+    tags: ['Next.js','TypeScript','Zustand','Socket.io','TanStack Query','Monaco Editor','Recharts','Supabase','JDoodle Compiler API','OpenRouter'],
+    description: 'A full-stack, real-time collaborative coding interview platform featuring live code synchronization, automated grading, event-sourced session replay, and AI-powered interview feedback.',
+    longDescription:
+      'Code Arena is a production-grade coding interview platform built with Next.js, Express, Socket.IO, and Supabase. Interviewers can schedule coding sessions for candidates, who solve problems collaboratively in a shared Monaco-powered editor with live code synchronization, real-time chat, language switching, and code execution. Submissions are automatically evaluated against public and hidden test cases using the JDoodle Compiler API, while every significant room event is persisted through event sourcing to enable complete interview replay. After each interview, AI-generated structured feedback evaluates technical ability, problem-solving, communication, and overall performance using OpenRouter. The platform also includes authentication, role-based access control, analytics dashboards, secure backend authorization, and deployment on free-tier cloud services.',
+    coverImage: problemDetails,
+    role: 'Full Stack Developer',
+    duration: 'Completed',
+    impact: 'Designed and built a production-ready interview platform demonstrating real-time collaboration, event sourcing, secure role-based authorization, AI integration, automated grading, and scalable full-stack architecture using entirely free-tier infrastructure.',
+    tools: [
+      'Next.js 15',
+    'TypeScript',
+    'Node.js',
+    'Express',
+    'Socket.IO',
+    'Supabase',
+    'PostgreSQL',
+    'Supabase Auth',
+    'Monaco Editor',
+    'Tailwind CSS',
+    'ShadCN UI',
+    'TanStack Query',
+    'Zustand',
+    'OpenRouter API',
+    'JDoodle Compiler API',
+    'Zod',
+    'Axios',
+    'Recharts',
+    'Vercel',
+    'Render',
+    ],
+    link: 'https://code-arena-web-psi.vercel.app',
+    github: 'https://github.com/AnushAdk04/Code-Arena',
+    screenshots: [
+      {
+        src: codeArenaDashboard,
+        alt: 'Code Arena dashboard with interview overview and quick actions',
+      },
+      {
+        src: problemList,
+        alt: 'Problem list screen with search, filters, and problem selection',
+      },
+      {
+        src: problemDetails,
+        alt: 'Problem details and test cases screen',
+      },
+      {
+        src: codeArenaAnalytics,
+        alt: 'Analytics dashboard with interview performance insights',
+      },
+      {
+        src: interviewSection,
+        alt: 'Interview section with real-time collaboration features',
+      },
+      {
+        src: interviewFeedback,
+        alt: 'Detailed interview feedback and recording screen',
+      },
+    ],
+  },
   {
     id: 10,
     slug: 'pos-inventory-management-app',
