@@ -63,8 +63,100 @@ import interviewSection from '../assets/project-screenshots/code-arena/interview
 import problemDetails from '../assets/project-screenshots/code-arena/problems details and test cases.PNG'
 import problemList from '../assets/project-screenshots/code-arena/problems.PNG'
 
+// Casual-Arena Screenshots
+import casualArenaAchievement from '../assets/project-screenshots/casual-arena/achievement section.PNG';
+import casualArenaAllGame from '../assets/project-screenshots/casual-arena/all game section.PNG';
+import casualArenaHomePage from '../assets/project-screenshots/casual-arena/home page.PNG';
+import casualArenaStats from '../assets/project-screenshots/casual-arena/stats section.PNG';
+import casualArenaSudoku from '../assets/project-screenshots/casual-arena/sudoku gameplay.PNG';
+
+// Velocity Rush Screenshots
+import velocityRushAIOpponents from '../assets/project-screenshots/velocity rush/AI opponents.PNG';
+import velocityRushHomeScreen from '../assets/project-screenshots/velocity rush/home screen.PNG';
+import velocityRushRaceFinish from '../assets/project-screenshots/velocity rush/race finish screen.PNG';
+import velocityRushRacingCheckpoint from '../assets/project-screenshots/velocity rush/racing checkpoint.PNG';
+import velocityRushRacingStartLine from '../assets/project-screenshots/velocity rush/racing start line.PNG';
+
 // Project data for portfolio and project detail pages
 export const projectsData = [
+  {
+    id: 13,
+    slug: 'casual-arena',
+    title: 'Casual-Arena',
+    category: 'Fun and Games',
+    tags: ['Next.js 15', 'React 19', 'TypeScript', 'Zustand', 'Framer Motion'],
+    description: 'A modern web-based casual gaming platform featuring multiple browser games, achievements, and statistics.',
+    longDescription:
+      'Casual-Arena is a modern web-based casual gaming platform built with Next.js, React, and TypeScript. It serves as a gaming ecosystem with shared state, UI components, and game engine patterns. Features include dynamic multi-game routing (Puzzle, Arcade, Card games), an achievement system, statistics tracking, and daily challenges generated via deterministic seeds. The platform ensures high performance, mobile responsiveness, and progressive enhancement.',
+    coverImage: casualArenaHomePage,
+    role: 'Frontend Developer',
+    duration: 'Completed',
+    impact: 'Built a modular gaming architecture with reusable game engine patterns, shared state, and dynamic routing.',
+    tools: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Zustand', 'React Hook Form', 'Zod', 'dnd-kit'],
+    link: 'https://casual-arena.vercel.app/',
+    github: 'https://github.com/AnushAdk04/Casual-Arena',
+    screenshots: [
+      {
+        src: casualArenaHomePage,
+        alt: 'Casual-Arena home page',
+      },
+      {
+        src: casualArenaAllGame,
+        alt: 'All game section',
+      },
+      {
+        src: casualArenaSudoku,
+        alt: 'Sudoku gameplay',
+      },
+      {
+        src: casualArenaAchievement,
+        alt: 'Achievement section',
+      },
+      {
+        src: casualArenaStats,
+        alt: 'Stats section',
+      },
+    ],
+  },
+  {
+    id: 12,
+    slug: 'velocity-rush',
+    title: 'Velocity Rush',
+    category: 'Fun and Games',
+    tags: ['Next.js', 'React Three Fiber', 'Three.js', 'TypeScript', 'Zustand'],
+    description: 'A browser-based 3D arcade racing game built with Next.js, React Three Fiber, and custom vehicle physics.',
+    longDescription:
+      'Velocity Rush is a browser-based 3D arcade racing game built with Next.js, React Three Fiber, and custom vehicle physics. It features hand-built acceleration, braking, drift, and a 6-speed automatic gearbox simulated entirely with vector math. The game includes an F1-style circuit, 5 AI opponents, live race systems for lap tracking and positions, dynamic HUD, and procedural audio generated via the Web Audio API without asset files.',
+    coverImage: velocityRushHomeScreen,
+    role: 'Full Stack / Game Developer',
+    duration: 'Completed',
+    impact: 'Engineered a custom physics simulation and real-time game state management without a traditional game engine.',
+    tools: ['Next.js 16', 'React Three Fiber', 'Three.js', 'Zustand', 'TypeScript', 'Web Audio API'],
+    link: 'https://velocity-rush-beta.vercel.app/',
+    github: 'https://github.com/AnushAdk04/velocity-rush',
+    screenshots: [
+      {
+        src: velocityRushHomeScreen,
+        alt: 'Velocity Rush home screen',
+      },
+      {
+        src: velocityRushRacingStartLine,
+        alt: 'Racing start line',
+      },
+      {
+        src: velocityRushRacingCheckpoint,
+        alt: 'Racing checkpoint',
+      },
+      {
+        src: velocityRushAIOpponents,
+        alt: 'AI opponents',
+      },
+      {
+        src: velocityRushRaceFinish,
+        alt: 'Race finish screen',
+      },
+    ],
+  },
   {
     id: 11,
     slug: 'code-arena',
