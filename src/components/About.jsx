@@ -150,7 +150,7 @@ const About = () => {
             Full Stack Developer & UI/UX Designer
           </h3>
           <p className="text-lg text-slate-600 leading-relaxed mb-6">
-            I'm Anush Adhikari, a full stack developer focused on building scalable web applications and intuitive
+            I'm Anush Adhikari, a full stack web developer in Nepal focused on building scalable web applications and intuitive
             user experiences. I enjoy solving real-world problems through practical and maintainable products.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed mb-8">

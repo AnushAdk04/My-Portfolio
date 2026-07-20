@@ -2,7 +2,8 @@
 User-agent: *
 Allow: /
 Disallow: /private/
-Sitemap: https://anushadhikari.com.np/sitemap.xml
+Disallow: /CV.pdf
+Sitemap: https://www.anushadhikari.com.np/sitemap.xml
 
 # Crawl delay
 Crawl-delay: 1

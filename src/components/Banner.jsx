@@ -12,7 +12,7 @@ const Banner = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Full Stack Developer', 'React &amp; Node.js Developer', 'UI/UX Designer'],
+      strings: ['Full Stack Web Developer in Nepal', 'React &amp; Node.js Developer in Nepal', 'UI/UX Designer in Nepal'],
       startDelay: 100,
       typeSpeed: 50,
       backSpeed: 10,
@@ -144,7 +144,7 @@ const Banner = () => {
             variants={itemVariants}
             className="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl"
           >
-            I am a full stack developer passionate about building clean, useful, and scalable web products.
+            I am a full stack web developer in Nepal passionate about building clean, useful, and scalable web products.
             I enjoy turning ideas into real experiences with thoughtful UI and reliable backend architecture.
           </motion.p>
 
